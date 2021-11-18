@@ -226,16 +226,14 @@
                     </li>
                 </ul>
             </div>
-            <form action="signup_form">
-                <div class="footer-form">
-                    <label for="sign">Подпишитесь на рассылку</label>
-                    <input type="email" name="sign" id="sign" placeholder="E-mail">
-                </div>
-                <button type="submit" class="footer-btn">Подписаться
-                    <svg class="icon-send" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M24 0 0 13.5l7.67 2.84L19.5 5.25l-8.998 12.14.007.002-.009-.002V24l4.301-5.018L20.251 21 24 0Z"
-                            fill="#fff" />
+            <form class="footer-form" action="signup_form">
+                <!-- <div class="footer-form"> -->
+                <label class="footer-label" for="sign">Подпишитесь на рассылку</label>
+                <input class="footer-input" type="email" name="sign" id="sign" placeholder="E-mail">
+                <!-- </div> -->
+                <button class="footer-btn" type="submit">Подписаться
+                    <svg class="icon-send" width="24" height="24">
+                        <use href="./images/icons.svg#icon-icon-send"></use>
                     </svg>
                 </button>
             </form>

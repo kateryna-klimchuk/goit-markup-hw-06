@@ -51,10 +51,8 @@
             <div class="blackdrop is-hidden" data-modal>
                 <div class="modal">
                     <button data-modal-close class="modal-btn">
-                        <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11 1.108 9.892 0 5.5 4.392 1.108 0 0 1.108 4.392 5.5 0 9.892 1.108 11 5.5 6.608 9.892 11 11 9.892 6.608 5.5 11 1.108Z"
-                                />
+                        <svg width="11" height="11">
+                            <use href="./images/icons.svg#icon-vector"></use>
                         </svg>
                     </button>
                     <form class="modal-form" action="user_form" autocomplete="off">
@@ -63,10 +61,8 @@
                             <label class="modal-label" for="name">Имя</label>
                             <input class="modal-input" type="text" id="name">
                             <span class="modal-icon">
-                                <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6 6a3 3 0 1 0 0-6 3 3 0 1 0 0 6Zm0 1.5c-2.002 0-6 1.005-6 3v.75c0 .412.338.75.75.75h10.5c.412 0 .75-.338.75-.75v-.75c0-1.995-3.998-3-6-3Z"
-                                         />
+                                <svg width="12" height="12">
+                                    <use href="./images/icons.svg#icon-modal-user"></use>
                                 </svg>
                             </span>
                             </div>
@@ -74,10 +70,8 @@
                                 <label class="modal-label" for="tel">Телефон</label>                                
                                 <input class="modal-input" type="tel" id="tel">
                                 <span class="modal-icon">
-                                    <svg  width="14" height="14"  xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="m11.996 9.123-1.838-.21a1.44 1.44 0 0 0-1.187.412l-1.332 1.332a10.888 10.888 0 0 1-4.769-4.77L4.21 4.55a1.44 1.44 0 0 0 .412-1.187l-.21-1.824a1.448 1.448 0 0 0-1.44-1.28H1.72C.902.257.222.937.272 1.754c.384 6.18 5.327 11.116 11.5 11.5.817.05 1.498-.63 1.498-1.448v-1.252a1.434 1.434 0 0 0-1.274-1.432Z"
-                                            />
+                                    <svg  width="14" height="14">
+                                        <use href="./images/icons.svg#icon-modal-tel"></use>
                                     </svg>
                                 </span>                                
                             </div>
@@ -86,9 +80,7 @@
                                 <input class="modal-input" type="email" id="email">
                                 <span class="modal-icon">
                                     <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M14 0H2C1.175 0 .507.675.507 1.5l-.007 9c0 .825.675 1.5 1.5 1.5h12c.825 0 1.5-.675 1.5-1.5v-9C15.5.675 14.825 0 14 0Zm-.3 3.188L8.398 6.502a.759.759 0 0 1-.795 0L2.3 3.187a.637.637 0 1 1 .675-1.08L8 5.25l5.025-3.143a.637.637 0 1 1 .675 1.08Z"
-                                            />
+                                        <use href="./images/icons.svg#icon-modal-mail"></use>
                                     </svg>
                                 </span>                                
                             </div>
@@ -99,12 +91,10 @@
                             <div class="modal-checkbox">
                                 <span class="agreement-icon">
                                     <svg width="13" height="10" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z"
-                                        stroke="#fff" stroke-width=".2" />
-                                </svg>
+                                        <use href="./images/icons.svg#icon-agree-icon"></use>
+                                    </svg>
                             </span>
-                                <input class="checkbox-input" type="checkbox" name="check-box" id="check-box">
+                                <input class="checkbox-input" type="checkbox" name="check-box" id="check-box" disabled>
                                 <label class="modal-label" for="check-box">Соглашаюсь с рассылкой и принимаю <a class="link-agreement" href="">Условия договора</a></label>
                             </div>
                                 <button class="form-btn" type="submit">Отправить</button>
@@ -415,15 +405,14 @@
                     </li>
                 </ul>
             </div>
-                <form action="signup_form">
-                    <div class="footer-form">
-                        <label for="sign">Подпишитесь на рассылку</label>
-                        <input type="email" name="sign" id="sign" placeholder="E-mail">
-                    </div>
-                        <button type="submit" class="footer-btn">Подписаться
-                            <svg class="icon-send" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M24 0 0 13.5l7.67 2.84L19.5 5.25l-8.998 12.14.007.002-.009-.002V24l4.301-5.018L20.251 21 24 0Z"
-                                    fill="#fff" />
+                <form class="footer-form" action="signup_form">
+                    <!-- <div class="footer-form"> -->
+                        <label class="footer-label" for="sign">Подпишитесь на рассылку</label>
+                        <input class="footer-input" type="email" name="sign" id="sign" placeholder="E-mail">
+                    <!-- </div> -->
+                        <button class="footer-btn" type="submit">Подписаться
+                            <svg class="icon-send" width="24" height="24">
+                                <use href="./images/icons.svg#icon-icon-send"></use>
                             </svg>
                         </button>
                 </form>
