@@ -272,7 +272,9 @@ a.logo {
 }
 
 .modal-btn {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     right: 0;
@@ -285,9 +287,12 @@ a.logo {
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
+    fill: #000;
 }
 
-
+.modal-btn:focus {
+    fill: var(--blue-accent);
+}
 /* ---------Modal window --------*/
 
 .modal-form {
@@ -296,11 +301,11 @@ a.logo {
     margin: 0;
     padding: 0;
     padding: 40px;
-    outline: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
+
 
 .modal-title {
     font-weight: 700;
@@ -321,6 +326,7 @@ a.logo {
     flex-direction: column;
     position: relative;
 }
+
 
 .modal-label {
     font-size: 12px;
@@ -358,22 +364,26 @@ textarea {
     border-radius: 4px;
     resize: none;
     height: 120px;
+}
 
+textarea:focus {
+    outline: none;
+    border: 1px solid #2196F3;
 }
 
 .modal-checkbox {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
-    
+    position: relative;
 }
 .modal-checkbox label {
     font-family: Roboto;
     font-size: 14px;
     line-height: 1.71;
     color: var(--secondary-text-color);
-
+    margin-left: 9px;
 }
 
 .link-agreement {
@@ -381,6 +391,17 @@ textarea {
 }
 
 
+.agreement-icon {
+    position: absolute;
+    top: 5px;
+    left: 18px;
+    background-color: var(--blue-accent);
+    fill: var(--main-white);
+    border-radius: 2px;
+    width: 16px;
+    height: 15px;
+
+}
 
 .form-btn {
     margin: 0 auto;
@@ -409,10 +430,11 @@ textarea {
 }
 
 .modal-input:focus {
+    outline: none;
     border: 1px solid #2196F3;
 }
 
-.modal-input:focus + .modal-icon {
+.modal-list:focus-within > .modal-icon {
     fill: var(--blue-accent);
 }
 
