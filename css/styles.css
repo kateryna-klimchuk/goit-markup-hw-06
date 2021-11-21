@@ -243,6 +243,7 @@ a.logo {
 
     opacity: 1;
     transition: opacity 250ms var(--transition-timing);
+    z-index: 2;
 }
 
 .blackdrop.is-hidden {
@@ -383,7 +384,7 @@ textarea:focus {
 .modal-checkbox {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;position: relative;
 }
 
 .checkbox-input {
