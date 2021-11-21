@@ -265,6 +265,8 @@ a.logo {
     left: 50%;
     transform: translate(-50%, -50%) scaleY(1);
     transition: transform 250ms var(--transition-timing);
+    padding: 40px;
+
 
 
     
@@ -288,11 +290,15 @@ a.logo {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     fill: #000;
+    transition: fill 250ms var(--transition-timing);
 }
 
+.modal-btn:hover,
 .modal-btn:focus {
     fill: var(--blue-accent);
 }
+
+
 /* ---------Modal window --------*/
 
 .modal-form {
@@ -300,7 +306,6 @@ a.logo {
     height: 100%;
     margin: 0;
     padding: 0;
-    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -342,6 +347,8 @@ a.logo {
     border-radius: 4px;
     height: 40px;
     padding-left: 42px;
+    transition: border 250ms var(--transition-timing);
+
 }
 
 .modal-list [placeholder] {
@@ -364,6 +371,8 @@ textarea {
     border-radius: 4px;
     resize: none;
     height: 120px;
+    margin-bottom: 20px;
+    transition: border 250ms var(--transition-timing);
 }
 
 textarea:focus {
@@ -375,9 +384,16 @@ textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    position: relative;
 }
+
+.checkbox-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    position: absolute;
+}
+
 .modal-checkbox label {
     font-family: Roboto;
     font-size: 14px;
@@ -386,25 +402,27 @@ textarea:focus {
     margin-left: 9px;
 }
 
+
 .link-agreement {
     color: var(--blue-accent);
 }
 
 
-.agreement-icon {
-    position: absolute;
-    top: 5px;
-    left: 18px;
+.checkbox-input:checked + .agreement-icon {
     background-color: var(--blue-accent);
+    border: none;
+}
+
+
+.agreement-icon {
     fill: var(--main-white);
     border-radius: 2px;
+    border: 1px solid var(--primery-text-color);
     width: 16px;
     height: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 3px;
-    padding-right: 2px;
 }
 
 .form-btn {
@@ -426,11 +444,13 @@ textarea:focus {
 
 .modal-icon {
     position: absolute;
-    top: 52%;
+    top: 48%;
     left: 12px;
     width: 18px;
     height: 18px;
     fill: currentColor;
+    transition: fill 250ms var(--transition-timing);
+
 }
 
 .modal-input:focus {
@@ -846,6 +866,8 @@ color: var(--main-white);
 
 .footer-input[placeholder] {
     padding: 15px 16px;
+    color: rgba(255, 255, 255, 0.6);
+
 }
 
 .footer-input:focus {
